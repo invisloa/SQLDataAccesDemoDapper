@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormUI", "FormUI\FormUI.csproj", "{56B50D01-4ACC-4DBA-9160-5DDB744F7FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormUI", "FormUI\FormUI.csproj", "{56B50D01-4ACC-4DBA-9160-5DDB744F7FDD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLProject", "SQLProject\SQLProject.sqlproj", "{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{56B50D01-4ACC-4DBA-9160-5DDB744F7FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56B50D01-4ACC-4DBA-9160-5DDB744F7FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56B50D01-4ACC-4DBA-9160-5DDB744F7FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84DFF95B-A1EE-4F93-9768-70AE61D9BFD0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

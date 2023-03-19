@@ -11,9 +11,10 @@ namespace FormUI
 {
 	public class DataAccess
 	{
+		IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("SampleDB"));
 		public List<Person> GetPeople(string lastName)
 		{
-			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("SampleDB")))
+			using (connection)
 			{
 				//return connection.Query<Person>($"select * from dbo.People where LastName = '{lastName}'").ToList();
 				var output = connection.Query<Person>("dbo.People_GetByLastName @LastName", new { LastName = lastName }).ToList();
@@ -23,12 +24,18 @@ namespace FormUI
 
 		public void InsertPerson(string firstName, string lastName, string emailAddress, string phoneNumber)
 		{
-			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("SampleDB")))
+			using (connection)
 			{
-				List<Person> people = new List<Person>(); 
+/*				this method was in the tutorial
+ *				
+ *				
+ *				List<Person> people = new List<Person>(); 
 
 				people.Add(new Person { FirstName = firstName, LastName = lastName, EmailAddress = emailAddress, PhoneNumber = phoneNumber });
 
+*/
+				
+				// my method
 				Person person = new Person { FirstName = firstName, LastName = lastName, EmailAddress = emailAddress, PhoneNumber = phoneNumber };
 
 				connection.Execute("dbo.People_Insert @FirstName, @LastName, @EmailAddress, @PhoneNumber", person);
