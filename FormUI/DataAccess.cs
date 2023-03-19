@@ -35,7 +35,7 @@ namespace FormUI
 
 */
 				
-				// my method
+				// my way
 				Person person = new Person { FirstName = firstName, LastName = lastName, EmailAddress = emailAddress, PhoneNumber = phoneNumber };
 
 				connection.Execute("dbo.People_Insert @FirstName, @LastName, @EmailAddress, @PhoneNumber", person);
